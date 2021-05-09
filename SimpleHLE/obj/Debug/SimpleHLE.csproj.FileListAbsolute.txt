@@ -8,3 +8,13 @@ C:\Users\Gustavo\source\repos\Emulator8b\SimpleHLE\obj\Debug\SimpleHLE.csproj.Ge
 C:\Users\Gustavo\source\repos\Emulator8b\SimpleHLE\obj\Debug\SimpleHLE.csproj.CoreCompileInputs.cache
 C:\Users\Gustavo\source\repos\Emulator8b\SimpleHLE\obj\Debug\SimpleHLE.exe
 C:\Users\Gustavo\source\repos\Emulator8b\SimpleHLE\obj\Debug\SimpleHLE.pdb
+C:\Users\Ozzy\Repos\Emulator8b\SimpleHLE\bin\Debug\SimpleHLE.exe.config
+C:\Users\Ozzy\Repos\Emulator8b\SimpleHLE\bin\Debug\SimpleHLE.exe
+C:\Users\Ozzy\Repos\Emulator8b\SimpleHLE\bin\Debug\SimpleHLE.pdb
+C:\Users\Ozzy\Repos\Emulator8b\SimpleHLE\obj\Debug\SimpleHLE.csprojAssemblyReference.cache
+C:\Users\Ozzy\Repos\Emulator8b\SimpleHLE\obj\Debug\SimpleHLE.Form1.resources
+C:\Users\Ozzy\Repos\Emulator8b\SimpleHLE\obj\Debug\SimpleHLE.Properties.Resources.resources
+C:\Users\Ozzy\Repos\Emulator8b\SimpleHLE\obj\Debug\SimpleHLE.csproj.GenerateResource.cache
+C:\Users\Ozzy\Repos\Emulator8b\SimpleHLE\obj\Debug\SimpleHLE.csproj.CoreCompileInputs.cache
+C:\Users\Ozzy\Repos\Emulator8b\SimpleHLE\obj\Debug\SimpleHLE.exe
+C:\Users\Ozzy\Repos\Emulator8b\SimpleHLE\obj\Debug\SimpleHLE.pdb

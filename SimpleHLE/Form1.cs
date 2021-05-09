@@ -47,16 +47,22 @@ namespace SimpleHLE {
 
         private void UpdateGui() {
             textBoxClock.Text = CPU.CLOCK.ToString();
-            textBoxProgramCounter.Text = CPU.PC.ToString("X2");
-            textBoxR01.Text = CPU.R01.ToString("X2");
-            textBoxR02.Text = CPU.R02.ToString("X2");
-            textBoxR03.Text = CPU.R03.ToString("X2");
-            textBoxALU.Text = CPU.ALU.ToString("X2");
-            textBoxBus.Text = CPU.BUS.ToString("X2");
-            textBoxUnityControl0.Text = CPU.UC0.ToString("X2");
-            textBoxUnityControl1.Text = CPU.UC1.ToString("X2");
-            textBoxUnityControl2.Text = CPU.UC2.ToString("X2");
-            textBoxOutput.Text = CPU.OUTPUT.ToString("X2");
+            textBoxProgramCounter.Text = CPU.PC.ToString("x2").ToUpper();
+            string a = CPU.R01.ToString("x2").ToUpper();
+            textBoxR01.Text = CPU.R01.ToString("x2").ToUpper();
+            textBoxR02.Text = CPU.R02.ToString("x2").ToUpper();
+            textBoxR03.Text = CPU.R03.ToString("x2").ToUpper();
+            textBoxALU.Text = CPU.ALU.ToString("x2").ToUpper();
+            textBoxBus.Text = CPU.BUS.ToString("x2").ToUpper();
+            textBoxUnityControl0.Text = CPU.UC0.ToString("x2").ToUpper();
+            textBoxUnityControl1.Text = CPU.UC1.ToString("x2").ToUpper();
+            textBoxUnityControl2.Text = CPU.UC2.ToString("x2").ToUpper();
+            string str = Convert.ToString(CPU.OUTPUT1, 2);
+            while(str.Length < 8) str = str.Insert(0, "0");
+            textBoxOutput1.Text = str;
+            str = Convert.ToString(CPU.OUTPUT2, 2);
+            while (str.Length < 8) str = str.Insert(0, "0");
+            textBoxOutput2.Text = str;
             checkBoxSRZero.Checked = CPU.SRZERO;
             if (CPU.FAIL) {
                 textBoxInstruction.Text = "FAIL";
@@ -110,6 +116,8 @@ namespace SimpleHLE {
         public const byte R01 = 0x01;
         public const byte R02 = 0x02;
         public const byte R03 = 0x03;
+        public const byte O01 = 0x04;
+        public const byte O02 = 0x05;
 
         public static byte GetByName(string name) {
             if (typeof(Consts).GetFields().Where(x => x.Name == name).Count() > 0) {
@@ -262,10 +270,12 @@ namespace SimpleHLE {
         // OUT
         static byte[] OUT(string ins) {
             try {
-                byte[] b = new byte[2];
+                byte[] b = new byte[3];
                 var dst = ins.Split(' ')[1].Split(',')[0];
+                var val = ins.Split(' ')[1].Split(',')[1];
                 b[0] = Consts.OUT;
                 b[1] = Consts.GetByName(dst);
+                b[2] = Consts.GetByName(val);
                 return b;
             } catch (Exception) {
                 Error = "Fail to decode OUT";
@@ -281,7 +291,8 @@ namespace SimpleHLE {
         public static byte R02 = 0;
         public static byte R03 = 0;
         public static byte BUS = 0;
-        public static byte OUTPUT = 0;
+        public static byte OUTPUT1 = 0;
+        public static byte OUTPUT2 = 0;
         public static byte UC0 = 0;
         public static byte UC1 = 0;
         public static byte UC2 = 0;
@@ -298,7 +309,8 @@ namespace SimpleHLE {
         public static void Reset() {
             PC = ALU = R01 = R02 = R03 = 0;
             BUS = 0;
-            OUTPUT = 0;
+            OUTPUT1 = 0;
+            OUTPUT2 = 0;
             UC0 = UC1 = UC2 = 0;
             SRZERO = false;
             FAIL = false;
@@ -393,8 +405,12 @@ namespace SimpleHLE {
             }
         }
 
-        public static void OUTPUTWriteEnable() {
-            OUTPUT = BUS;
+        public static void OUTPUT1WriteEnable() {
+            OUTPUT1 = BUS;
+        }
+        public static void OUTPUT2WriteEnable()
+        {
+            OUTPUT2 = BUS;
         }
         public static void R01WriteEnable() {
             R01 = BUS;
@@ -535,7 +551,8 @@ namespace SimpleHLE {
             Fetch();
             UC1 = BUS;
             Fetch();
-            switch (UC1) {
+            UC2 = BUS;
+            switch (UC2) {
                 case Consts.R01:
                     R01ReadEnable();
                     break;
@@ -549,7 +566,18 @@ namespace SimpleHLE {
                     FAIL = true;
                     break;
             }
-            OUTPUTWriteEnable();
+            switch (UC1)
+            {
+                case Consts.O01:
+                    OUTPUT1WriteEnable();
+                    break;
+                case Consts.O02:
+                    OUTPUT2WriteEnable();
+                    break;
+                default:
+                    FAIL = true;
+                    break;
+            }
         }
     }
 }

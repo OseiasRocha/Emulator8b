@@ -39,7 +39,7 @@ namespace SimpleHLE {
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxR03 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBoxOutput = new System.Windows.Forms.TextBox();
+            this.textBoxOutput1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.checkBoxSRZero = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -56,6 +56,8 @@ namespace SimpleHLE {
             this.buttonRun = new System.Windows.Forms.Button();
             this.buttonReset = new System.Windows.Forms.Button();
             this.buttonClock = new System.Windows.Forms.Button();
+            this.textBoxOutput2 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxCode
@@ -67,8 +69,8 @@ namespace SimpleHLE {
             this.textBoxCode.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBoxCode.Size = new System.Drawing.Size(171, 377);
             this.textBoxCode.TabIndex = 0;
-            this.textBoxCode.Text = "MOV R01, 10\r\nMOV R02, 20\r\nSTO R01\r\nINC R01\r\nDEC R02\r\nCMP R02, R03\r\nJNZ A\r\nOUT R01" +
-    "\r\nHLT\r\n";
+            this.textBoxCode.Text = "MOV R01, 10\r\nMOV R02, 20\r\nSTO R01\r\nINC R01\r\nDEC R02\r\nCMP R02, R03\r\nJNZ A\r\nOUT O01" +
+    ", R01\r\nOUT O02, R02\r\nHLT\r\n";
             // 
             // textBoxOpcode
             // 
@@ -188,22 +190,22 @@ namespace SimpleHLE {
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(375, 170);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.Size = new System.Drawing.Size(58, 13);
             this.label7.TabIndex = 1;
-            this.label7.Text = "OUTPUT";
+            this.label7.Text = "OUTPUT1";
             // 
-            // textBoxOutput
+            // textBoxOutput1
             // 
-            this.textBoxOutput.Location = new System.Drawing.Point(434, 167);
-            this.textBoxOutput.Name = "textBoxOutput";
-            this.textBoxOutput.Size = new System.Drawing.Size(100, 20);
-            this.textBoxOutput.TabIndex = 2;
-            this.textBoxOutput.TabStop = false;
+            this.textBoxOutput1.Location = new System.Drawing.Point(434, 167);
+            this.textBoxOutput1.Name = "textBoxOutput1";
+            this.textBoxOutput1.Size = new System.Drawing.Size(100, 20);
+            this.textBoxOutput1.TabIndex = 2;
+            this.textBoxOutput1.TabStop = false;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(431, 201);
+            this.label8.Location = new System.Drawing.Point(431, 234);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(92, 13);
             this.label8.TabIndex = 1;
@@ -212,7 +214,7 @@ namespace SimpleHLE {
             // checkBoxSRZero
             // 
             this.checkBoxSRZero.AutoSize = true;
-            this.checkBoxSRZero.Location = new System.Drawing.Point(434, 229);
+            this.checkBoxSRZero.Location = new System.Drawing.Point(434, 262);
             this.checkBoxSRZero.Name = "checkBoxSRZero";
             this.checkBoxSRZero.Size = new System.Drawing.Size(56, 17);
             this.checkBoxSRZero.TabIndex = 3;
@@ -223,7 +225,7 @@ namespace SimpleHLE {
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(400, 266);
+            this.label9.Location = new System.Drawing.Point(400, 299);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(27, 13);
             this.label9.TabIndex = 1;
@@ -231,7 +233,7 @@ namespace SimpleHLE {
             // 
             // textBoxClock
             // 
-            this.textBoxClock.Location = new System.Drawing.Point(434, 263);
+            this.textBoxClock.Location = new System.Drawing.Point(434, 296);
             this.textBoxClock.Name = "textBoxClock";
             this.textBoxClock.Size = new System.Drawing.Size(100, 20);
             this.textBoxClock.TabIndex = 2;
@@ -240,7 +242,7 @@ namespace SimpleHLE {
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(398, 292);
+            this.label10.Location = new System.Drawing.Point(398, 325);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(29, 13);
             this.label10.TabIndex = 1;
@@ -248,7 +250,7 @@ namespace SimpleHLE {
             // 
             // textBoxBus
             // 
-            this.textBoxBus.Location = new System.Drawing.Point(434, 289);
+            this.textBoxBus.Location = new System.Drawing.Point(434, 322);
             this.textBoxBus.Name = "textBoxBus";
             this.textBoxBus.Size = new System.Drawing.Size(100, 20);
             this.textBoxBus.TabIndex = 2;
@@ -257,7 +259,7 @@ namespace SimpleHLE {
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(399, 318);
+            this.label11.Location = new System.Drawing.Point(399, 351);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(28, 13);
             this.label11.TabIndex = 1;
@@ -265,7 +267,7 @@ namespace SimpleHLE {
             // 
             // textBoxUnityControl0
             // 
-            this.textBoxUnityControl0.Location = new System.Drawing.Point(434, 315);
+            this.textBoxUnityControl0.Location = new System.Drawing.Point(434, 348);
             this.textBoxUnityControl0.Name = "textBoxUnityControl0";
             this.textBoxUnityControl0.Size = new System.Drawing.Size(100, 20);
             this.textBoxUnityControl0.TabIndex = 2;
@@ -274,7 +276,7 @@ namespace SimpleHLE {
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(399, 344);
+            this.label12.Location = new System.Drawing.Point(399, 377);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(28, 13);
             this.label12.TabIndex = 1;
@@ -282,7 +284,7 @@ namespace SimpleHLE {
             // 
             // textBoxUnityControl1
             // 
-            this.textBoxUnityControl1.Location = new System.Drawing.Point(434, 341);
+            this.textBoxUnityControl1.Location = new System.Drawing.Point(434, 374);
             this.textBoxUnityControl1.Name = "textBoxUnityControl1";
             this.textBoxUnityControl1.Size = new System.Drawing.Size(100, 20);
             this.textBoxUnityControl1.TabIndex = 2;
@@ -291,7 +293,7 @@ namespace SimpleHLE {
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(399, 370);
+            this.label13.Location = new System.Drawing.Point(399, 403);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(28, 13);
             this.label13.TabIndex = 1;
@@ -299,7 +301,7 @@ namespace SimpleHLE {
             // 
             // textBoxUnityControl2
             // 
-            this.textBoxUnityControl2.Location = new System.Drawing.Point(434, 367);
+            this.textBoxUnityControl2.Location = new System.Drawing.Point(434, 400);
             this.textBoxUnityControl2.Name = "textBoxUnityControl2";
             this.textBoxUnityControl2.Size = new System.Drawing.Size(100, 20);
             this.textBoxUnityControl2.TabIndex = 2;
@@ -345,11 +347,30 @@ namespace SimpleHLE {
             this.buttonClock.UseVisualStyleBackColor = true;
             this.buttonClock.Click += new System.EventHandler(this.buttonClock_Click);
             // 
+            // textBoxOutput2
+            // 
+            this.textBoxOutput2.Location = new System.Drawing.Point(434, 193);
+            this.textBoxOutput2.Name = "textBoxOutput2";
+            this.textBoxOutput2.Size = new System.Drawing.Size(100, 20);
+            this.textBoxOutput2.TabIndex = 6;
+            this.textBoxOutput2.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(375, 196);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(58, 13);
+            this.label14.TabIndex = 5;
+            this.label14.Text = "OUTPUT2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(547, 441);
+            this.Controls.Add(this.textBoxOutput2);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.buttonClock);
             this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.buttonRun);
@@ -364,7 +385,7 @@ namespace SimpleHLE {
             this.Controls.Add(this.label11);
             this.Controls.Add(this.textBoxClock);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBoxOutput);
+            this.Controls.Add(this.textBoxOutput1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -408,7 +429,7 @@ namespace SimpleHLE {
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxR03;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBoxOutput;
+        private System.Windows.Forms.TextBox textBoxOutput1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox checkBoxSRZero;
         private System.Windows.Forms.Label label9;
@@ -425,6 +446,8 @@ namespace SimpleHLE {
         private System.Windows.Forms.Button buttonRun;
         private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.Button buttonClock;
+        private System.Windows.Forms.TextBox textBoxOutput2;
+        private System.Windows.Forms.Label label14;
     }
 }
 
