@@ -12,6 +12,23 @@ namespace SimpleHLE {
     public partial class Form1 : Form {
         public Form1() {
             InitializeComponent();
+            System.Windows.Forms.RadioButton[] OUTPUT1 = new System.Windows.Forms.RadioButton[8];
+            System.Windows.Forms.RadioButton[] OUTPUT2 = new System.Windows.Forms.RadioButton[8];
+            for (int i=0; i < OUTPUT1.Length; i++)
+            {
+                if (typeof(Form1).GetFields().Where(x => x.Name == "OUTPUT1P"+i).Count() > 0)
+                {
+                    OUTPUT1[i] = typeof(Form1).GetField("OUTPUT1P" + i);
+                }
+            }
+
+            for (int i = 0; i < OUTPUT1.Length; i++)
+            {
+                if (typeof(Consts).GetFields().Where(x => x.Name == "OUTPUT2P" + i).Count() > 0)
+                {
+                    OUTPUT2[i].Checked = (bool)typeof(Consts).GetField("OUTPUT2P" + i)?.GetValue(null);
+                }
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e) {
@@ -59,10 +76,10 @@ namespace SimpleHLE {
             textBoxUnityControl2.Text = CPU.UC2.ToString("x2").ToUpper();
             string str = Convert.ToString(CPU.OUTPUT1, 2);
             while(str.Length < 8) str = str.Insert(0, "0");
-            textBoxOutput1.Text = str;
+            //textBoxOutput1.Text = str;
             str = Convert.ToString(CPU.OUTPUT2, 2);
             while (str.Length < 8) str = str.Insert(0, "0");
-            textBoxOutput2.Text = str;
+            //textBoxOutput2.Text = str;
             checkBoxSRZero.Checked = CPU.SRZERO;
             if (CPU.FAIL) {
                 textBoxInstruction.Text = "FAIL";
