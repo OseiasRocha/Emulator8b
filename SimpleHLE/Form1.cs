@@ -12,23 +12,23 @@ namespace SimpleHLE {
     public partial class Form1 : Form {
         public Form1() {
             InitializeComponent();
-            System.Windows.Forms.RadioButton[] OUTPUT1 = new System.Windows.Forms.RadioButton[8];
-            System.Windows.Forms.RadioButton[] OUTPUT2 = new System.Windows.Forms.RadioButton[8];
-            for (int i=0; i < OUTPUT1.Length; i++)
-            {
-                if (typeof(Form1).GetFields().Where(x => x.Name == "OUTPUT1P"+i).Count() > 0)
-                {
-                    OUTPUT1[i] = typeof(Form1).GetField("OUTPUT1P" + i);
-                }
-            }
+            //System.Windows.Forms.RadioButton[] OUTPUT1 = new System.Windows.Forms.RadioButton[8];
+            //System.Windows.Forms.RadioButton[] OUTPUT2 = new System.Windows.Forms.RadioButton[8];
+            //for (int i=0; i < OUTPUT1.Length; i++)
+            //{
+            //    if (typeof(Form1).GetFields().Where(x => x.Name == "OUTPUT1P"+i).Count() > 0)
+            //    {
+            //        OUTPUT1[i] = typeof(Form1).GetField("OUTPUT1P" + i);
+            //    }
+            //}
 
-            for (int i = 0; i < OUTPUT1.Length; i++)
-            {
-                if (typeof(Consts).GetFields().Where(x => x.Name == "OUTPUT2P" + i).Count() > 0)
-                {
-                    OUTPUT2[i].Checked = (bool)typeof(Consts).GetField("OUTPUT2P" + i)?.GetValue(null);
-                }
-            }
+            //for (int i = 0; i < OUTPUT1.Length; i++)
+            //{
+            //    if (typeof(Consts).GetFields().Where(x => x.Name == "OUTPUT2P" + i).Count() > 0)
+            //    {
+            //        OUTPUT2[i].Checked = (bool)typeof(Consts).GetField("OUTPUT2P" + i)?.GetValue(null);
+            //    }
+            //}
         }
 
         private void Form1_Load(object sender, EventArgs e) {
@@ -69,6 +69,7 @@ namespace SimpleHLE {
             textBoxR01.Text = CPU.R01.ToString("x2").ToUpper();
             textBoxR02.Text = CPU.R02.ToString("x2").ToUpper();
             textBoxR03.Text = CPU.R03.ToString("x2").ToUpper();
+            textBoxR04.Text = CPU.R04.ToString("x2").ToUpper();
             textBoxALU.Text = CPU.ALU.ToString("x2").ToUpper();
             textBoxBus.Text = CPU.BUS.ToString("x2").ToUpper();
             textBoxUnityControl0.Text = CPU.UC0.ToString("x2").ToUpper();
@@ -133,8 +134,9 @@ namespace SimpleHLE {
         public const byte R01 = 0x01;
         public const byte R02 = 0x02;
         public const byte R03 = 0x03;
-        public const byte O01 = 0x04;
-        public const byte O02 = 0x05;
+        public const byte R04 = 0x04;
+        public const byte O01 = 0x05;
+        public const byte O02 = 0x06;
 
         public static byte GetByName(string name) {
             if (typeof(Consts).GetFields().Where(x => x.Name == name).Count() > 0) {
@@ -307,6 +309,7 @@ namespace SimpleHLE {
         public static byte R01 = 0;
         public static byte R02 = 0;
         public static byte R03 = 0;
+        public static byte R04 = 0;
         public static byte BUS = 0;
         public static byte OUTPUT1 = 0;
         public static byte OUTPUT2 = 0;
@@ -324,7 +327,7 @@ namespace SimpleHLE {
         }
 
         public static void Reset() {
-            PC = ALU = R01 = R02 = R03 = 0;
+            PC = ALU = R01 = R02 = R03 = R04 = 0;
             BUS = 0;
             OUTPUT1 = 0;
             OUTPUT2 = 0;
@@ -416,6 +419,9 @@ namespace SimpleHLE {
                 case Consts.R03:
                     R03WriteEnable();
                     break;
+                case Consts.R04:
+                    R04WriteEnable();
+                    break;
                 default:
                     FAIL = true;
                     break;
@@ -438,6 +444,10 @@ namespace SimpleHLE {
         public static void R03WriteEnable() {
             R03 = BUS;
         }
+        public static void R04WriteEnable()
+        {
+            R04 = BUS;
+        }
         public static void R01ReadEnable() {
             BUS = R01;
         }
@@ -446,6 +456,10 @@ namespace SimpleHLE {
         }
         public static void R03ReadEnable() {
             BUS = R03;
+        }
+        public static void R04ReadEnable()
+        {
+            BUS = R04;
         }
         public static void ALUReadEnable() {
             BUS = ALU;
@@ -466,6 +480,9 @@ namespace SimpleHLE {
                 case Consts.R03:
                     R03++;
                     break;
+                case Consts.R04:
+                    R04++;
+                    break;
                 default:
                     FAIL = true;
                     break;
@@ -485,6 +502,9 @@ namespace SimpleHLE {
                     break;
                 case Consts.R03:
                     R03--;
+                    break;
+                case Consts.R04:
+                    R04--;
                     break;
                 default:
                     FAIL = true;
@@ -510,6 +530,9 @@ namespace SimpleHLE {
                 case Consts.R03:
                     R03ReadEnable();
                     break;
+                case Consts.R04:
+                    R04ReadEnable();
+                    break;
                 default:
                     FAIL = true;
                     break;
@@ -523,6 +546,9 @@ namespace SimpleHLE {
                     break;
                 case Consts.R03:
                     SRZERO = BUS == R03;
+                    break;
+                case Consts.R04:
+                    SRZERO = BUS == R04;
                     break;
                 default:
                     FAIL = true;
@@ -556,6 +582,9 @@ namespace SimpleHLE {
                 case Consts.R03:
                     R03WriteEnable();
                     break;
+                case Consts.R04:
+                    R04WriteEnable();
+                    break;
                 default:
                     FAIL = true;
                     break;
@@ -578,6 +607,9 @@ namespace SimpleHLE {
                     break;
                 case Consts.R03:
                     R03ReadEnable();
+                    break;
+                case Consts.R04:
+                    R04ReadEnable();
                     break;
                 default:
                     FAIL = true;
