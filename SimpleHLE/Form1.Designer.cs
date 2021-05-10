@@ -39,7 +39,6 @@ namespace SimpleHLE {
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxR03 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBoxOutput1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.checkBoxSRZero = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -56,8 +55,23 @@ namespace SimpleHLE {
             this.buttonRun = new System.Windows.Forms.Button();
             this.buttonReset = new System.Windows.Forms.Button();
             this.buttonClock = new System.Windows.Forms.Button();
-            this.textBoxOutput2 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.OUTPUT1P7 = new System.Windows.Forms.RadioButton();
+            this.OUTPUT1P6 = new System.Windows.Forms.RadioButton();
+            this.OUTPUT1P5 = new System.Windows.Forms.RadioButton();
+            this.OUTPUT1P4 = new System.Windows.Forms.RadioButton();
+            this.OUTPUT1P3 = new System.Windows.Forms.RadioButton();
+            this.OUTPUT1P2 = new System.Windows.Forms.RadioButton();
+            this.OUTPUT1P1 = new System.Windows.Forms.RadioButton();
+            this.OUTPUT1P0 = new System.Windows.Forms.RadioButton();
+            this.OUTPUT2P0 = new System.Windows.Forms.RadioButton();
+            this.OUTPUT2P1 = new System.Windows.Forms.RadioButton();
+            this.OUTPUT2P2 = new System.Windows.Forms.RadioButton();
+            this.OUTPUT2P3 = new System.Windows.Forms.RadioButton();
+            this.OUTPUT2P4 = new System.Windows.Forms.RadioButton();
+            this.OUTPUT2P5 = new System.Windows.Forms.RadioButton();
+            this.OUTPUT2P6 = new System.Windows.Forms.RadioButton();
+            this.OUTPUT2P7 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // textBoxCode
@@ -96,7 +110,7 @@ namespace SimpleHLE {
             // 
             this.textBoxInstruction.Location = new System.Drawing.Point(434, 11);
             this.textBoxInstruction.Name = "textBoxInstruction";
-            this.textBoxInstruction.Size = new System.Drawing.Size(100, 20);
+            this.textBoxInstruction.Size = new System.Drawing.Size(112, 20);
             this.textBoxInstruction.TabIndex = 2;
             this.textBoxInstruction.TabStop = false;
             // 
@@ -113,7 +127,7 @@ namespace SimpleHLE {
             // 
             this.textBoxProgramCounter.Location = new System.Drawing.Point(434, 37);
             this.textBoxProgramCounter.Name = "textBoxProgramCounter";
-            this.textBoxProgramCounter.Size = new System.Drawing.Size(100, 20);
+            this.textBoxProgramCounter.Size = new System.Drawing.Size(112, 20);
             this.textBoxProgramCounter.TabIndex = 2;
             this.textBoxProgramCounter.TabStop = false;
             // 
@@ -130,7 +144,7 @@ namespace SimpleHLE {
             // 
             this.textBoxALU.Location = new System.Drawing.Point(434, 63);
             this.textBoxALU.Name = "textBoxALU";
-            this.textBoxALU.Size = new System.Drawing.Size(100, 20);
+            this.textBoxALU.Size = new System.Drawing.Size(112, 20);
             this.textBoxALU.TabIndex = 2;
             this.textBoxALU.TabStop = false;
             // 
@@ -147,7 +161,7 @@ namespace SimpleHLE {
             // 
             this.textBoxR01.Location = new System.Drawing.Point(434, 89);
             this.textBoxR01.Name = "textBoxR01";
-            this.textBoxR01.Size = new System.Drawing.Size(100, 20);
+            this.textBoxR01.Size = new System.Drawing.Size(112, 20);
             this.textBoxR01.TabIndex = 2;
             this.textBoxR01.TabStop = false;
             // 
@@ -164,7 +178,7 @@ namespace SimpleHLE {
             // 
             this.textBoxR02.Location = new System.Drawing.Point(434, 115);
             this.textBoxR02.Name = "textBoxR02";
-            this.textBoxR02.Size = new System.Drawing.Size(100, 20);
+            this.textBoxR02.Size = new System.Drawing.Size(112, 20);
             this.textBoxR02.TabIndex = 2;
             this.textBoxR02.TabStop = false;
             // 
@@ -181,7 +195,7 @@ namespace SimpleHLE {
             // 
             this.textBoxR03.Location = new System.Drawing.Point(434, 141);
             this.textBoxR03.Name = "textBoxR03";
-            this.textBoxR03.Size = new System.Drawing.Size(100, 20);
+            this.textBoxR03.Size = new System.Drawing.Size(112, 20);
             this.textBoxR03.TabIndex = 2;
             this.textBoxR03.TabStop = false;
             // 
@@ -194,18 +208,10 @@ namespace SimpleHLE {
             this.label7.TabIndex = 1;
             this.label7.Text = "OUTPUT1";
             // 
-            // textBoxOutput1
-            // 
-            this.textBoxOutput1.Location = new System.Drawing.Point(434, 167);
-            this.textBoxOutput1.Name = "textBoxOutput1";
-            this.textBoxOutput1.Size = new System.Drawing.Size(100, 20);
-            this.textBoxOutput1.TabIndex = 2;
-            this.textBoxOutput1.TabStop = false;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(431, 234);
+            this.label8.Location = new System.Drawing.Point(445, 232);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(92, 13);
             this.label8.TabIndex = 1;
@@ -235,7 +241,7 @@ namespace SimpleHLE {
             // 
             this.textBoxClock.Location = new System.Drawing.Point(434, 296);
             this.textBoxClock.Name = "textBoxClock";
-            this.textBoxClock.Size = new System.Drawing.Size(100, 20);
+            this.textBoxClock.Size = new System.Drawing.Size(112, 20);
             this.textBoxClock.TabIndex = 2;
             this.textBoxClock.TabStop = false;
             // 
@@ -252,7 +258,7 @@ namespace SimpleHLE {
             // 
             this.textBoxBus.Location = new System.Drawing.Point(434, 322);
             this.textBoxBus.Name = "textBoxBus";
-            this.textBoxBus.Size = new System.Drawing.Size(100, 20);
+            this.textBoxBus.Size = new System.Drawing.Size(112, 20);
             this.textBoxBus.TabIndex = 2;
             this.textBoxBus.TabStop = false;
             // 
@@ -269,7 +275,7 @@ namespace SimpleHLE {
             // 
             this.textBoxUnityControl0.Location = new System.Drawing.Point(434, 348);
             this.textBoxUnityControl0.Name = "textBoxUnityControl0";
-            this.textBoxUnityControl0.Size = new System.Drawing.Size(100, 20);
+            this.textBoxUnityControl0.Size = new System.Drawing.Size(112, 20);
             this.textBoxUnityControl0.TabIndex = 2;
             this.textBoxUnityControl0.TabStop = false;
             // 
@@ -286,7 +292,7 @@ namespace SimpleHLE {
             // 
             this.textBoxUnityControl1.Location = new System.Drawing.Point(434, 374);
             this.textBoxUnityControl1.Name = "textBoxUnityControl1";
-            this.textBoxUnityControl1.Size = new System.Drawing.Size(100, 20);
+            this.textBoxUnityControl1.Size = new System.Drawing.Size(112, 20);
             this.textBoxUnityControl1.TabIndex = 2;
             this.textBoxUnityControl1.TabStop = false;
             // 
@@ -303,7 +309,7 @@ namespace SimpleHLE {
             // 
             this.textBoxUnityControl2.Location = new System.Drawing.Point(434, 400);
             this.textBoxUnityControl2.Name = "textBoxUnityControl2";
-            this.textBoxUnityControl2.Size = new System.Drawing.Size(100, 20);
+            this.textBoxUnityControl2.Size = new System.Drawing.Size(112, 20);
             this.textBoxUnityControl2.TabIndex = 2;
             this.textBoxUnityControl2.TabStop = false;
             // 
@@ -347,14 +353,6 @@ namespace SimpleHLE {
             this.buttonClock.UseVisualStyleBackColor = true;
             this.buttonClock.Click += new System.EventHandler(this.buttonClock_Click);
             // 
-            // textBoxOutput2
-            // 
-            this.textBoxOutput2.Location = new System.Drawing.Point(434, 193);
-            this.textBoxOutput2.Name = "textBoxOutput2";
-            this.textBoxOutput2.Size = new System.Drawing.Size(100, 20);
-            this.textBoxOutput2.TabIndex = 6;
-            this.textBoxOutput2.TabStop = false;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -364,12 +362,205 @@ namespace SimpleHLE {
             this.label14.TabIndex = 5;
             this.label14.Text = "OUTPUT2";
             // 
+            // OUTPUT1P7
+            // 
+            this.OUTPUT1P7.AutoCheck = false;
+            this.OUTPUT1P7.AutoSize = true;
+            this.OUTPUT1P7.Enabled = false;
+            this.OUTPUT1P7.Location = new System.Drawing.Point(434, 170);
+            this.OUTPUT1P7.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT1P7.Name = "OUTPUT1P7";
+            this.OUTPUT1P7.Size = new System.Drawing.Size(14, 13);
+            this.OUTPUT1P7.TabIndex = 7;
+            this.OUTPUT1P7.TabStop = true;
+            this.OUTPUT1P7.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT1P6
+            // 
+            this.OUTPUT1P6.AutoSize = true;
+            this.OUTPUT1P6.Location = new System.Drawing.Point(448, 170);
+            this.OUTPUT1P6.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT1P6.Name = "OUTPUT1P6";
+            this.OUTPUT1P6.Size = new System.Drawing.Size(14, 13);
+            this.OUTPUT1P6.TabIndex = 8;
+            this.OUTPUT1P6.TabStop = true;
+            this.OUTPUT1P6.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT1P5
+            // 
+            this.OUTPUT1P5.AutoSize = true;
+            this.OUTPUT1P5.Location = new System.Drawing.Point(462, 170);
+            this.OUTPUT1P5.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT1P5.Name = "OUTPUT1P5";
+            this.OUTPUT1P5.Size = new System.Drawing.Size(14, 13);
+            this.OUTPUT1P5.TabIndex = 9;
+            this.OUTPUT1P5.TabStop = true;
+            this.OUTPUT1P5.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT1P4
+            // 
+            this.OUTPUT1P4.AutoSize = true;
+            this.OUTPUT1P4.Location = new System.Drawing.Point(476, 170);
+            this.OUTPUT1P4.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT1P4.Name = "OUTPUT1P4";
+            this.OUTPUT1P4.Size = new System.Drawing.Size(14, 13);
+            this.OUTPUT1P4.TabIndex = 10;
+            this.OUTPUT1P4.TabStop = true;
+            this.OUTPUT1P4.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT1P3
+            // 
+            this.OUTPUT1P3.AutoSize = true;
+            this.OUTPUT1P3.Location = new System.Drawing.Point(490, 170);
+            this.OUTPUT1P3.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT1P3.Name = "OUTPUT1P3";
+            this.OUTPUT1P3.Size = new System.Drawing.Size(14, 13);
+            this.OUTPUT1P3.TabIndex = 11;
+            this.OUTPUT1P3.TabStop = true;
+            this.OUTPUT1P3.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT1P2
+            // 
+            this.OUTPUT1P2.AutoSize = true;
+            this.OUTPUT1P2.Location = new System.Drawing.Point(504, 170);
+            this.OUTPUT1P2.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT1P2.Name = "OUTPUT1P2";
+            this.OUTPUT1P2.Size = new System.Drawing.Size(14, 13);
+            this.OUTPUT1P2.TabIndex = 12;
+            this.OUTPUT1P2.TabStop = true;
+            this.OUTPUT1P2.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT1P1
+            // 
+            this.OUTPUT1P1.AutoSize = true;
+            this.OUTPUT1P1.Location = new System.Drawing.Point(518, 170);
+            this.OUTPUT1P1.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT1P1.Name = "OUTPUT1P1";
+            this.OUTPUT1P1.Size = new System.Drawing.Size(14, 13);
+            this.OUTPUT1P1.TabIndex = 13;
+            this.OUTPUT1P1.TabStop = true;
+            this.OUTPUT1P1.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT1P0
+            // 
+            this.OUTPUT1P0.AutoSize = true;
+            this.OUTPUT1P0.Location = new System.Drawing.Point(532, 170);
+            this.OUTPUT1P0.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT1P0.Name = "OUTPUT1P0";
+            this.OUTPUT1P0.Size = new System.Drawing.Size(14, 13);
+            this.OUTPUT1P0.TabIndex = 14;
+            this.OUTPUT1P0.TabStop = true;
+            this.OUTPUT1P0.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT2P0
+            // 
+            this.OUTPUT2P0.AutoSize = true;
+            this.OUTPUT2P0.Location = new System.Drawing.Point(532, 196);
+            this.OUTPUT2P0.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT2P0.Name = "OUTPUT2P0";
+            this.OUTPUT2P0.Size = new System.Drawing.Size(14, 13);
+            this.OUTPUT2P0.TabIndex = 22;
+            this.OUTPUT2P0.TabStop = true;
+            this.OUTPUT2P0.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT2P1
+            // 
+            this.OUTPUT2P1.AutoSize = true;
+            this.OUTPUT2P1.Location = new System.Drawing.Point(518, 196);
+            this.OUTPUT2P1.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT2P1.Name = "OUTPUT2P1";
+            this.OUTPUT2P1.Size = new System.Drawing.Size(14, 13);
+            this.OUTPUT2P1.TabIndex = 21;
+            this.OUTPUT2P1.TabStop = true;
+            this.OUTPUT2P1.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT2P2
+            // 
+            this.OUTPUT2P2.AutoSize = true;
+            this.OUTPUT2P2.Location = new System.Drawing.Point(504, 196);
+            this.OUTPUT2P2.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT2P2.Name = "OUTPUT2P2";
+            this.OUTPUT2P2.Size = new System.Drawing.Size(14, 13);
+            this.OUTPUT2P2.TabIndex = 20;
+            this.OUTPUT2P2.TabStop = true;
+            this.OUTPUT2P2.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT2P3
+            // 
+            this.OUTPUT2P3.AutoSize = true;
+            this.OUTPUT2P3.Location = new System.Drawing.Point(490, 196);
+            this.OUTPUT2P3.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT2P3.Name = "OUTPUT2P3";
+            this.OUTPUT2P3.Size = new System.Drawing.Size(14, 13);
+            this.OUTPUT2P3.TabIndex = 19;
+            this.OUTPUT2P3.TabStop = true;
+            this.OUTPUT2P3.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT2P4
+            // 
+            this.OUTPUT2P4.AutoSize = true;
+            this.OUTPUT2P4.Location = new System.Drawing.Point(476, 196);
+            this.OUTPUT2P4.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT2P4.Name = "OUTPUT2P4";
+            this.OUTPUT2P4.Size = new System.Drawing.Size(14, 13);
+            this.OUTPUT2P4.TabIndex = 18;
+            this.OUTPUT2P4.TabStop = true;
+            this.OUTPUT2P4.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT2P5
+            // 
+            this.OUTPUT2P5.AutoSize = true;
+            this.OUTPUT2P5.Location = new System.Drawing.Point(462, 196);
+            this.OUTPUT2P5.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT2P5.Name = "OUTPUT2P5";
+            this.OUTPUT2P5.Size = new System.Drawing.Size(14, 13);
+            this.OUTPUT2P5.TabIndex = 17;
+            this.OUTPUT2P5.TabStop = true;
+            this.OUTPUT2P5.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT2P6
+            // 
+            this.OUTPUT2P6.AutoSize = true;
+            this.OUTPUT2P6.Location = new System.Drawing.Point(448, 196);
+            this.OUTPUT2P6.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT2P6.Name = "OUTPUT2P6";
+            this.OUTPUT2P6.Size = new System.Drawing.Size(14, 13);
+            this.OUTPUT2P6.TabIndex = 16;
+            this.OUTPUT2P6.TabStop = true;
+            this.OUTPUT2P6.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT2P7
+            // 
+            this.OUTPUT2P7.AutoSize = true;
+            this.OUTPUT2P7.Location = new System.Drawing.Point(434, 196);
+            this.OUTPUT2P7.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT2P7.Name = "OUTPUT2P7";
+            this.OUTPUT2P7.Size = new System.Drawing.Size(14, 13);
+            this.OUTPUT2P7.TabIndex = 15;
+            this.OUTPUT2P7.TabStop = true;
+            this.OUTPUT2P7.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 441);
-            this.Controls.Add(this.textBoxOutput2);
+            this.ClientSize = new System.Drawing.Size(554, 441);
+            this.Controls.Add(this.OUTPUT2P0);
+            this.Controls.Add(this.OUTPUT2P1);
+            this.Controls.Add(this.OUTPUT2P2);
+            this.Controls.Add(this.OUTPUT2P3);
+            this.Controls.Add(this.OUTPUT2P4);
+            this.Controls.Add(this.OUTPUT2P5);
+            this.Controls.Add(this.OUTPUT2P6);
+            this.Controls.Add(this.OUTPUT2P7);
+            this.Controls.Add(this.OUTPUT1P0);
+            this.Controls.Add(this.OUTPUT1P1);
+            this.Controls.Add(this.OUTPUT1P2);
+            this.Controls.Add(this.OUTPUT1P3);
+            this.Controls.Add(this.OUTPUT1P4);
+            this.Controls.Add(this.OUTPUT1P5);
+            this.Controls.Add(this.OUTPUT1P6);
+            this.Controls.Add(this.OUTPUT1P7);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.buttonClock);
             this.Controls.Add(this.buttonReset);
@@ -385,7 +576,6 @@ namespace SimpleHLE {
             this.Controls.Add(this.label11);
             this.Controls.Add(this.textBoxClock);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBoxOutput1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -429,7 +619,6 @@ namespace SimpleHLE {
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxR03;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBoxOutput1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox checkBoxSRZero;
         private System.Windows.Forms.Label label9;
@@ -446,8 +635,23 @@ namespace SimpleHLE {
         private System.Windows.Forms.Button buttonRun;
         private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.Button buttonClock;
-        private System.Windows.Forms.TextBox textBoxOutput2;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.RadioButton OUTPUT1P7;
+        private System.Windows.Forms.RadioButton OUTPUT1P6;
+        private System.Windows.Forms.RadioButton OUTPUT1P5;
+        private System.Windows.Forms.RadioButton OUTPUT1P4;
+        private System.Windows.Forms.RadioButton OUTPUT1P3;
+        private System.Windows.Forms.RadioButton OUTPUT1P2;
+        private System.Windows.Forms.RadioButton OUTPUT1P1;
+        private System.Windows.Forms.RadioButton OUTPUT1P0;
+        private System.Windows.Forms.RadioButton OUTPUT2P0;
+        private System.Windows.Forms.RadioButton OUTPUT2P1;
+        private System.Windows.Forms.RadioButton OUTPUT2P2;
+        private System.Windows.Forms.RadioButton OUTPUT2P3;
+        private System.Windows.Forms.RadioButton OUTPUT2P4;
+        private System.Windows.Forms.RadioButton OUTPUT2P5;
+        private System.Windows.Forms.RadioButton OUTPUT2P6;
+        private System.Windows.Forms.RadioButton OUTPUT2P7;
     }
 }
 
