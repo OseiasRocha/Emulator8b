@@ -10,25 +10,28 @@ using System.Windows.Forms;
 
 namespace SimpleHLE {
     public partial class Form1 : Form {
+        public CheckBox[] OUTPUT1 = new CheckBox[8];
+        public CheckBox[] OUTPUT2 = new CheckBox[8];
+
         public Form1() {
             InitializeComponent();
-            //System.Windows.Forms.RadioButton[] OUTPUT1 = new System.Windows.Forms.RadioButton[8];
-            //System.Windows.Forms.RadioButton[] OUTPUT2 = new System.Windows.Forms.RadioButton[8];
-            //for (int i=0; i < OUTPUT1.Length; i++)
-            //{
-            //    if (typeof(Form1).GetFields().Where(x => x.Name == "OUTPUT1P"+i).Count() > 0)
-            //    {
-            //        OUTPUT1[i] = typeof(Form1).GetField("OUTPUT1P" + i);
-            //    }
-            //}
 
-            //for (int i = 0; i < OUTPUT1.Length; i++)
-            //{
-            //    if (typeof(Consts).GetFields().Where(x => x.Name == "OUTPUT2P" + i).Count() > 0)
-            //    {
-            //        OUTPUT2[i].Checked = (bool)typeof(Consts).GetField("OUTPUT2P" + i)?.GetValue(null);
-            //    }
-            //}
+            OUTPUT1[0] = OUTPUT1P0;
+            OUTPUT1[1] = OUTPUT1P1;
+            OUTPUT1[2] = OUTPUT1P2;
+            OUTPUT1[3] = OUTPUT1P3;
+            OUTPUT1[4] = OUTPUT1P4;
+            OUTPUT1[5] = OUTPUT1P5;
+            OUTPUT1[6] = OUTPUT1P6;
+            OUTPUT1[7] = OUTPUT1P7;
+            OUTPUT2[0] = OUTPUT2P0;
+            OUTPUT2[1] = OUTPUT2P1;
+            OUTPUT2[2] = OUTPUT2P2;
+            OUTPUT2[3] = OUTPUT2P3;
+            OUTPUT2[4] = OUTPUT2P4;
+            OUTPUT2[5] = OUTPUT2P5;
+            OUTPUT2[6] = OUTPUT2P6;
+            OUTPUT2[7] = OUTPUT2P7;
         }
 
         private void Form1_Load(object sender, EventArgs e) {
@@ -77,7 +80,8 @@ namespace SimpleHLE {
             textBoxUnityControl2.Text = CPU.UC2.ToString("x2").ToUpper();
             string str = Convert.ToString(CPU.OUTPUT1, 2);
             while(str.Length < 8) str = str.Insert(0, "0");
-            //textBoxOutput1.Text = str;
+            //OUTPUT1[0].Checked = true;
+            //OUTPUT1[0].CheckState = CheckState.Indeterminate;
             str = Convert.ToString(CPU.OUTPUT2, 2);
             while (str.Length < 8) str = str.Insert(0, "0");
             //textBoxOutput2.Text = str;

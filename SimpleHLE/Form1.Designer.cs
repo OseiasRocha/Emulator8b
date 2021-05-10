@@ -56,24 +56,24 @@ namespace SimpleHLE {
             this.buttonReset = new System.Windows.Forms.Button();
             this.buttonClock = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.OUTPUT1P7 = new System.Windows.Forms.RadioButton();
-            this.OUTPUT1P6 = new System.Windows.Forms.RadioButton();
-            this.OUTPUT1P5 = new System.Windows.Forms.RadioButton();
-            this.OUTPUT1P4 = new System.Windows.Forms.RadioButton();
-            this.OUTPUT1P3 = new System.Windows.Forms.RadioButton();
-            this.OUTPUT1P2 = new System.Windows.Forms.RadioButton();
-            this.OUTPUT1P1 = new System.Windows.Forms.RadioButton();
-            this.OUTPUT1P0 = new System.Windows.Forms.RadioButton();
-            this.OUTPUT2P0 = new System.Windows.Forms.RadioButton();
-            this.OUTPUT2P1 = new System.Windows.Forms.RadioButton();
-            this.OUTPUT2P2 = new System.Windows.Forms.RadioButton();
-            this.OUTPUT2P3 = new System.Windows.Forms.RadioButton();
-            this.OUTPUT2P4 = new System.Windows.Forms.RadioButton();
-            this.OUTPUT2P5 = new System.Windows.Forms.RadioButton();
-            this.OUTPUT2P6 = new System.Windows.Forms.RadioButton();
-            this.OUTPUT2P7 = new System.Windows.Forms.RadioButton();
             this.label15 = new System.Windows.Forms.Label();
             this.textBoxR04 = new System.Windows.Forms.TextBox();
+            this.OUTPUT1P0 = new System.Windows.Forms.CheckBox();
+            this.OUTPUT1P7 = new System.Windows.Forms.CheckBox();
+            this.OUTPUT1P6 = new System.Windows.Forms.CheckBox();
+            this.OUTPUT1P5 = new System.Windows.Forms.CheckBox();
+            this.OUTPUT1P4 = new System.Windows.Forms.CheckBox();
+            this.OUTPUT1P3 = new System.Windows.Forms.CheckBox();
+            this.OUTPUT1P2 = new System.Windows.Forms.CheckBox();
+            this.OUTPUT1P1 = new System.Windows.Forms.CheckBox();
+            this.OUTPUT2P1 = new System.Windows.Forms.CheckBox();
+            this.OUTPUT2P2 = new System.Windows.Forms.CheckBox();
+            this.OUTPUT2P3 = new System.Windows.Forms.CheckBox();
+            this.OUTPUT2P4 = new System.Windows.Forms.CheckBox();
+            this.OUTPUT2P5 = new System.Windows.Forms.CheckBox();
+            this.OUTPUT2P6 = new System.Windows.Forms.CheckBox();
+            this.OUTPUT2P7 = new System.Windows.Forms.CheckBox();
+            this.OUTPUT2P0 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // textBoxCode
@@ -364,184 +364,6 @@ namespace SimpleHLE {
             this.label14.TabIndex = 5;
             this.label14.Text = "OUTPUT2";
             // 
-            // OUTPUT1P7
-            // 
-            this.OUTPUT1P7.AutoCheck = false;
-            this.OUTPUT1P7.AutoSize = true;
-            this.OUTPUT1P7.Enabled = false;
-            this.OUTPUT1P7.Location = new System.Drawing.Point(433, 206);
-            this.OUTPUT1P7.Margin = new System.Windows.Forms.Padding(0);
-            this.OUTPUT1P7.Name = "OUTPUT1P7";
-            this.OUTPUT1P7.Size = new System.Drawing.Size(14, 13);
-            this.OUTPUT1P7.TabIndex = 7;
-            this.OUTPUT1P7.TabStop = true;
-            this.OUTPUT1P7.UseVisualStyleBackColor = true;
-            // 
-            // OUTPUT1P6
-            // 
-            this.OUTPUT1P6.AutoSize = true;
-            this.OUTPUT1P6.Location = new System.Drawing.Point(447, 206);
-            this.OUTPUT1P6.Margin = new System.Windows.Forms.Padding(0);
-            this.OUTPUT1P6.Name = "OUTPUT1P6";
-            this.OUTPUT1P6.Size = new System.Drawing.Size(14, 13);
-            this.OUTPUT1P6.TabIndex = 8;
-            this.OUTPUT1P6.TabStop = true;
-            this.OUTPUT1P6.UseVisualStyleBackColor = true;
-            // 
-            // OUTPUT1P5
-            // 
-            this.OUTPUT1P5.AutoSize = true;
-            this.OUTPUT1P5.Location = new System.Drawing.Point(461, 206);
-            this.OUTPUT1P5.Margin = new System.Windows.Forms.Padding(0);
-            this.OUTPUT1P5.Name = "OUTPUT1P5";
-            this.OUTPUT1P5.Size = new System.Drawing.Size(14, 13);
-            this.OUTPUT1P5.TabIndex = 9;
-            this.OUTPUT1P5.TabStop = true;
-            this.OUTPUT1P5.UseVisualStyleBackColor = true;
-            // 
-            // OUTPUT1P4
-            // 
-            this.OUTPUT1P4.AutoSize = true;
-            this.OUTPUT1P4.Location = new System.Drawing.Point(475, 206);
-            this.OUTPUT1P4.Margin = new System.Windows.Forms.Padding(0);
-            this.OUTPUT1P4.Name = "OUTPUT1P4";
-            this.OUTPUT1P4.Size = new System.Drawing.Size(14, 13);
-            this.OUTPUT1P4.TabIndex = 10;
-            this.OUTPUT1P4.TabStop = true;
-            this.OUTPUT1P4.UseVisualStyleBackColor = true;
-            // 
-            // OUTPUT1P3
-            // 
-            this.OUTPUT1P3.AutoSize = true;
-            this.OUTPUT1P3.Location = new System.Drawing.Point(489, 206);
-            this.OUTPUT1P3.Margin = new System.Windows.Forms.Padding(0);
-            this.OUTPUT1P3.Name = "OUTPUT1P3";
-            this.OUTPUT1P3.Size = new System.Drawing.Size(14, 13);
-            this.OUTPUT1P3.TabIndex = 11;
-            this.OUTPUT1P3.TabStop = true;
-            this.OUTPUT1P3.UseVisualStyleBackColor = true;
-            // 
-            // OUTPUT1P2
-            // 
-            this.OUTPUT1P2.AutoSize = true;
-            this.OUTPUT1P2.Location = new System.Drawing.Point(503, 206);
-            this.OUTPUT1P2.Margin = new System.Windows.Forms.Padding(0);
-            this.OUTPUT1P2.Name = "OUTPUT1P2";
-            this.OUTPUT1P2.Size = new System.Drawing.Size(14, 13);
-            this.OUTPUT1P2.TabIndex = 12;
-            this.OUTPUT1P2.TabStop = true;
-            this.OUTPUT1P2.UseVisualStyleBackColor = true;
-            // 
-            // OUTPUT1P1
-            // 
-            this.OUTPUT1P1.AutoSize = true;
-            this.OUTPUT1P1.Location = new System.Drawing.Point(517, 206);
-            this.OUTPUT1P1.Margin = new System.Windows.Forms.Padding(0);
-            this.OUTPUT1P1.Name = "OUTPUT1P1";
-            this.OUTPUT1P1.Size = new System.Drawing.Size(14, 13);
-            this.OUTPUT1P1.TabIndex = 13;
-            this.OUTPUT1P1.TabStop = true;
-            this.OUTPUT1P1.UseVisualStyleBackColor = true;
-            // 
-            // OUTPUT1P0
-            // 
-            this.OUTPUT1P0.AutoSize = true;
-            this.OUTPUT1P0.Location = new System.Drawing.Point(531, 206);
-            this.OUTPUT1P0.Margin = new System.Windows.Forms.Padding(0);
-            this.OUTPUT1P0.Name = "OUTPUT1P0";
-            this.OUTPUT1P0.Size = new System.Drawing.Size(14, 13);
-            this.OUTPUT1P0.TabIndex = 14;
-            this.OUTPUT1P0.TabStop = true;
-            this.OUTPUT1P0.UseVisualStyleBackColor = true;
-            // 
-            // OUTPUT2P0
-            // 
-            this.OUTPUT2P0.AutoSize = true;
-            this.OUTPUT2P0.Location = new System.Drawing.Point(531, 232);
-            this.OUTPUT2P0.Margin = new System.Windows.Forms.Padding(0);
-            this.OUTPUT2P0.Name = "OUTPUT2P0";
-            this.OUTPUT2P0.Size = new System.Drawing.Size(14, 13);
-            this.OUTPUT2P0.TabIndex = 22;
-            this.OUTPUT2P0.TabStop = true;
-            this.OUTPUT2P0.UseVisualStyleBackColor = true;
-            // 
-            // OUTPUT2P1
-            // 
-            this.OUTPUT2P1.AutoSize = true;
-            this.OUTPUT2P1.Location = new System.Drawing.Point(517, 232);
-            this.OUTPUT2P1.Margin = new System.Windows.Forms.Padding(0);
-            this.OUTPUT2P1.Name = "OUTPUT2P1";
-            this.OUTPUT2P1.Size = new System.Drawing.Size(14, 13);
-            this.OUTPUT2P1.TabIndex = 21;
-            this.OUTPUT2P1.TabStop = true;
-            this.OUTPUT2P1.UseVisualStyleBackColor = true;
-            // 
-            // OUTPUT2P2
-            // 
-            this.OUTPUT2P2.AutoSize = true;
-            this.OUTPUT2P2.Location = new System.Drawing.Point(503, 232);
-            this.OUTPUT2P2.Margin = new System.Windows.Forms.Padding(0);
-            this.OUTPUT2P2.Name = "OUTPUT2P2";
-            this.OUTPUT2P2.Size = new System.Drawing.Size(14, 13);
-            this.OUTPUT2P2.TabIndex = 20;
-            this.OUTPUT2P2.TabStop = true;
-            this.OUTPUT2P2.UseVisualStyleBackColor = true;
-            // 
-            // OUTPUT2P3
-            // 
-            this.OUTPUT2P3.AutoSize = true;
-            this.OUTPUT2P3.Location = new System.Drawing.Point(489, 232);
-            this.OUTPUT2P3.Margin = new System.Windows.Forms.Padding(0);
-            this.OUTPUT2P3.Name = "OUTPUT2P3";
-            this.OUTPUT2P3.Size = new System.Drawing.Size(14, 13);
-            this.OUTPUT2P3.TabIndex = 19;
-            this.OUTPUT2P3.TabStop = true;
-            this.OUTPUT2P3.UseVisualStyleBackColor = true;
-            // 
-            // OUTPUT2P4
-            // 
-            this.OUTPUT2P4.AutoSize = true;
-            this.OUTPUT2P4.Location = new System.Drawing.Point(475, 232);
-            this.OUTPUT2P4.Margin = new System.Windows.Forms.Padding(0);
-            this.OUTPUT2P4.Name = "OUTPUT2P4";
-            this.OUTPUT2P4.Size = new System.Drawing.Size(14, 13);
-            this.OUTPUT2P4.TabIndex = 18;
-            this.OUTPUT2P4.TabStop = true;
-            this.OUTPUT2P4.UseVisualStyleBackColor = true;
-            // 
-            // OUTPUT2P5
-            // 
-            this.OUTPUT2P5.AutoSize = true;
-            this.OUTPUT2P5.Location = new System.Drawing.Point(461, 232);
-            this.OUTPUT2P5.Margin = new System.Windows.Forms.Padding(0);
-            this.OUTPUT2P5.Name = "OUTPUT2P5";
-            this.OUTPUT2P5.Size = new System.Drawing.Size(14, 13);
-            this.OUTPUT2P5.TabIndex = 17;
-            this.OUTPUT2P5.TabStop = true;
-            this.OUTPUT2P5.UseVisualStyleBackColor = true;
-            // 
-            // OUTPUT2P6
-            // 
-            this.OUTPUT2P6.AutoSize = true;
-            this.OUTPUT2P6.Location = new System.Drawing.Point(447, 232);
-            this.OUTPUT2P6.Margin = new System.Windows.Forms.Padding(0);
-            this.OUTPUT2P6.Name = "OUTPUT2P6";
-            this.OUTPUT2P6.Size = new System.Drawing.Size(14, 13);
-            this.OUTPUT2P6.TabIndex = 16;
-            this.OUTPUT2P6.TabStop = true;
-            this.OUTPUT2P6.UseVisualStyleBackColor = true;
-            // 
-            // OUTPUT2P7
-            // 
-            this.OUTPUT2P7.AutoSize = true;
-            this.OUTPUT2P7.Location = new System.Drawing.Point(433, 232);
-            this.OUTPUT2P7.Margin = new System.Windows.Forms.Padding(0);
-            this.OUTPUT2P7.Name = "OUTPUT2P7";
-            this.OUTPUT2P7.Size = new System.Drawing.Size(14, 13);
-            this.OUTPUT2P7.TabIndex = 15;
-            this.OUTPUT2P7.TabStop = true;
-            this.OUTPUT2P7.UseVisualStyleBackColor = true;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -559,12 +381,187 @@ namespace SimpleHLE {
             this.textBoxR04.TabIndex = 2;
             this.textBoxR04.TabStop = false;
             // 
+            // OUTPUT1P0
+            // 
+            this.OUTPUT1P0.AutoCheck = false;
+            this.OUTPUT1P0.AutoSize = true;
+            this.OUTPUT1P0.Location = new System.Drawing.Point(540, 206);
+            this.OUTPUT1P0.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT1P0.Name = "OUTPUT1P0";
+            this.OUTPUT1P0.Size = new System.Drawing.Size(15, 14);
+            this.OUTPUT1P0.TabIndex = 6;
+            this.OUTPUT1P0.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT1P7
+            // 
+            this.OUTPUT1P7.AutoCheck = false;
+            this.OUTPUT1P7.AutoSize = true;
+            this.OUTPUT1P7.Location = new System.Drawing.Point(435, 206);
+            this.OUTPUT1P7.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT1P7.Name = "OUTPUT1P7";
+            this.OUTPUT1P7.Size = new System.Drawing.Size(15, 14);
+            this.OUTPUT1P7.TabIndex = 7;
+            this.OUTPUT1P7.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT1P6
+            // 
+            this.OUTPUT1P6.AutoCheck = false;
+            this.OUTPUT1P6.AutoSize = true;
+            this.OUTPUT1P6.Location = new System.Drawing.Point(450, 206);
+            this.OUTPUT1P6.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT1P6.Name = "OUTPUT1P6";
+            this.OUTPUT1P6.Size = new System.Drawing.Size(15, 14);
+            this.OUTPUT1P6.TabIndex = 8;
+            this.OUTPUT1P6.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT1P5
+            // 
+            this.OUTPUT1P5.AutoCheck = false;
+            this.OUTPUT1P5.AutoSize = true;
+            this.OUTPUT1P5.Location = new System.Drawing.Point(465, 206);
+            this.OUTPUT1P5.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT1P5.Name = "OUTPUT1P5";
+            this.OUTPUT1P5.Size = new System.Drawing.Size(15, 14);
+            this.OUTPUT1P5.TabIndex = 9;
+            this.OUTPUT1P5.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT1P4
+            // 
+            this.OUTPUT1P4.AutoCheck = false;
+            this.OUTPUT1P4.AutoSize = true;
+            this.OUTPUT1P4.Location = new System.Drawing.Point(480, 206);
+            this.OUTPUT1P4.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT1P4.Name = "OUTPUT1P4";
+            this.OUTPUT1P4.Size = new System.Drawing.Size(15, 14);
+            this.OUTPUT1P4.TabIndex = 10;
+            this.OUTPUT1P4.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT1P3
+            // 
+            this.OUTPUT1P3.AutoCheck = false;
+            this.OUTPUT1P3.AutoSize = true;
+            this.OUTPUT1P3.Location = new System.Drawing.Point(495, 206);
+            this.OUTPUT1P3.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT1P3.Name = "OUTPUT1P3";
+            this.OUTPUT1P3.Size = new System.Drawing.Size(15, 14);
+            this.OUTPUT1P3.TabIndex = 11;
+            this.OUTPUT1P3.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT1P2
+            // 
+            this.OUTPUT1P2.AutoCheck = false;
+            this.OUTPUT1P2.AutoSize = true;
+            this.OUTPUT1P2.Location = new System.Drawing.Point(510, 206);
+            this.OUTPUT1P2.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT1P2.Name = "OUTPUT1P2";
+            this.OUTPUT1P2.Size = new System.Drawing.Size(15, 14);
+            this.OUTPUT1P2.TabIndex = 12;
+            this.OUTPUT1P2.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT1P1
+            // 
+            this.OUTPUT1P1.AutoCheck = false;
+            this.OUTPUT1P1.AutoSize = true;
+            this.OUTPUT1P1.Location = new System.Drawing.Point(525, 206);
+            this.OUTPUT1P1.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT1P1.Name = "OUTPUT1P1";
+            this.OUTPUT1P1.Size = new System.Drawing.Size(15, 14);
+            this.OUTPUT1P1.TabIndex = 13;
+            this.OUTPUT1P1.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT2P1
+            // 
+            this.OUTPUT2P1.AutoCheck = false;
+            this.OUTPUT2P1.AutoSize = true;
+            this.OUTPUT2P1.Location = new System.Drawing.Point(525, 231);
+            this.OUTPUT2P1.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT2P1.Name = "OUTPUT2P1";
+            this.OUTPUT2P1.Size = new System.Drawing.Size(15, 14);
+            this.OUTPUT2P1.TabIndex = 21;
+            this.OUTPUT2P1.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT2P2
+            // 
+            this.OUTPUT2P2.AutoCheck = false;
+            this.OUTPUT2P2.AutoSize = true;
+            this.OUTPUT2P2.Location = new System.Drawing.Point(510, 231);
+            this.OUTPUT2P2.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT2P2.Name = "OUTPUT2P2";
+            this.OUTPUT2P2.Size = new System.Drawing.Size(15, 14);
+            this.OUTPUT2P2.TabIndex = 20;
+            this.OUTPUT2P2.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT2P3
+            // 
+            this.OUTPUT2P3.AutoCheck = false;
+            this.OUTPUT2P3.AutoSize = true;
+            this.OUTPUT2P3.Location = new System.Drawing.Point(495, 231);
+            this.OUTPUT2P3.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT2P3.Name = "OUTPUT2P3";
+            this.OUTPUT2P3.Size = new System.Drawing.Size(15, 14);
+            this.OUTPUT2P3.TabIndex = 19;
+            this.OUTPUT2P3.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT2P4
+            // 
+            this.OUTPUT2P4.AutoCheck = false;
+            this.OUTPUT2P4.AutoSize = true;
+            this.OUTPUT2P4.Location = new System.Drawing.Point(480, 231);
+            this.OUTPUT2P4.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT2P4.Name = "OUTPUT2P4";
+            this.OUTPUT2P4.Size = new System.Drawing.Size(15, 14);
+            this.OUTPUT2P4.TabIndex = 18;
+            this.OUTPUT2P4.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT2P5
+            // 
+            this.OUTPUT2P5.AutoCheck = false;
+            this.OUTPUT2P5.AutoSize = true;
+            this.OUTPUT2P5.Location = new System.Drawing.Point(465, 231);
+            this.OUTPUT2P5.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT2P5.Name = "OUTPUT2P5";
+            this.OUTPUT2P5.Size = new System.Drawing.Size(15, 14);
+            this.OUTPUT2P5.TabIndex = 17;
+            this.OUTPUT2P5.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT2P6
+            // 
+            this.OUTPUT2P6.AutoCheck = false;
+            this.OUTPUT2P6.AutoSize = true;
+            this.OUTPUT2P6.Location = new System.Drawing.Point(450, 231);
+            this.OUTPUT2P6.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT2P6.Name = "OUTPUT2P6";
+            this.OUTPUT2P6.Size = new System.Drawing.Size(15, 14);
+            this.OUTPUT2P6.TabIndex = 16;
+            this.OUTPUT2P6.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT2P7
+            // 
+            this.OUTPUT2P7.AutoCheck = false;
+            this.OUTPUT2P7.AutoSize = true;
+            this.OUTPUT2P7.Location = new System.Drawing.Point(435, 231);
+            this.OUTPUT2P7.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT2P7.Name = "OUTPUT2P7";
+            this.OUTPUT2P7.Size = new System.Drawing.Size(15, 14);
+            this.OUTPUT2P7.TabIndex = 15;
+            this.OUTPUT2P7.UseVisualStyleBackColor = true;
+            // 
+            // OUTPUT2P0
+            // 
+            this.OUTPUT2P0.AutoCheck = false;
+            this.OUTPUT2P0.AutoSize = true;
+            this.OUTPUT2P0.Location = new System.Drawing.Point(540, 231);
+            this.OUTPUT2P0.Margin = new System.Windows.Forms.Padding(0);
+            this.OUTPUT2P0.Name = "OUTPUT2P0";
+            this.OUTPUT2P0.Size = new System.Drawing.Size(15, 14);
+            this.OUTPUT2P0.TabIndex = 14;
+            this.OUTPUT2P0.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 481);
-            this.Controls.Add(this.OUTPUT2P0);
+            this.ClientSize = new System.Drawing.Size(566, 481);
             this.Controls.Add(this.OUTPUT2P1);
             this.Controls.Add(this.OUTPUT2P2);
             this.Controls.Add(this.OUTPUT2P3);
@@ -572,7 +569,7 @@ namespace SimpleHLE {
             this.Controls.Add(this.OUTPUT2P5);
             this.Controls.Add(this.OUTPUT2P6);
             this.Controls.Add(this.OUTPUT2P7);
-            this.Controls.Add(this.OUTPUT1P0);
+            this.Controls.Add(this.OUTPUT2P0);
             this.Controls.Add(this.OUTPUT1P1);
             this.Controls.Add(this.OUTPUT1P2);
             this.Controls.Add(this.OUTPUT1P3);
@@ -580,6 +577,7 @@ namespace SimpleHLE {
             this.Controls.Add(this.OUTPUT1P5);
             this.Controls.Add(this.OUTPUT1P6);
             this.Controls.Add(this.OUTPUT1P7);
+            this.Controls.Add(this.OUTPUT1P0);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.buttonClock);
             this.Controls.Add(this.buttonReset);
@@ -657,24 +655,24 @@ namespace SimpleHLE {
         private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.Button buttonClock;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.RadioButton OUTPUT1P7;
-        private System.Windows.Forms.RadioButton OUTPUT1P6;
-        private System.Windows.Forms.RadioButton OUTPUT1P5;
-        private System.Windows.Forms.RadioButton OUTPUT1P4;
-        private System.Windows.Forms.RadioButton OUTPUT1P3;
-        private System.Windows.Forms.RadioButton OUTPUT1P2;
-        private System.Windows.Forms.RadioButton OUTPUT1P1;
-        private System.Windows.Forms.RadioButton OUTPUT1P0;
-        private System.Windows.Forms.RadioButton OUTPUT2P0;
-        private System.Windows.Forms.RadioButton OUTPUT2P1;
-        private System.Windows.Forms.RadioButton OUTPUT2P2;
-        private System.Windows.Forms.RadioButton OUTPUT2P3;
-        private System.Windows.Forms.RadioButton OUTPUT2P4;
-        private System.Windows.Forms.RadioButton OUTPUT2P5;
-        private System.Windows.Forms.RadioButton OUTPUT2P6;
-        private System.Windows.Forms.RadioButton OUTPUT2P7;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBoxR04;
+        private System.Windows.Forms.CheckBox OUTPUT1P0;
+        private System.Windows.Forms.CheckBox OUTPUT1P7;
+        private System.Windows.Forms.CheckBox OUTPUT1P6;
+        private System.Windows.Forms.CheckBox OUTPUT1P5;
+        private System.Windows.Forms.CheckBox OUTPUT1P4;
+        private System.Windows.Forms.CheckBox OUTPUT1P3;
+        private System.Windows.Forms.CheckBox OUTPUT1P2;
+        private System.Windows.Forms.CheckBox OUTPUT1P1;
+        private System.Windows.Forms.CheckBox OUTPUT2P1;
+        private System.Windows.Forms.CheckBox OUTPUT2P2;
+        private System.Windows.Forms.CheckBox OUTPUT2P3;
+        private System.Windows.Forms.CheckBox OUTPUT2P4;
+        private System.Windows.Forms.CheckBox OUTPUT2P5;
+        private System.Windows.Forms.CheckBox OUTPUT2P6;
+        private System.Windows.Forms.CheckBox OUTPUT2P7;
+        private System.Windows.Forms.CheckBox OUTPUT2P0;
     }
 }
 
