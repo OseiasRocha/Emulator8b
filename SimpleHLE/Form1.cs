@@ -80,11 +80,15 @@ namespace SimpleHLE {
             textBoxUnityControl2.Text = CPU.UC2.ToString("x2").ToUpper();
             string str = Convert.ToString(CPU.OUTPUT1, 2);
             while(str.Length < 8) str = str.Insert(0, "0");
-            //OUTPUT1[0].Checked = true;
-            //OUTPUT1[0].CheckState = CheckState.Indeterminate;
+            for(int i=0; i < OUTPUT1.Length; i++){
+                OUTPUT1[i].CheckState = str[7 - i] == '1' ? CheckState.Indeterminate : CheckState.Unchecked;
+            }
             str = Convert.ToString(CPU.OUTPUT2, 2);
             while (str.Length < 8) str = str.Insert(0, "0");
-            //textBoxOutput2.Text = str;
+            for (int i = 0; i < OUTPUT2.Length; i++)
+            {
+                OUTPUT2[i].CheckState = str[7 - i] == '1' ? CheckState.Indeterminate : CheckState.Unchecked;
+            }
             checkBoxSRZero.Checked = CPU.SRZERO;
             if (CPU.FAIL) {
                 textBoxInstruction.Text = "FAIL";
