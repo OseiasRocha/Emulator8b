@@ -81,7 +81,9 @@ namespace SimpleHLE {
             this.creatorOseiasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.creatorGabrielToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.creatorHenriqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripButtonHelp = new System.Windows.Forms.ToolStripButton();
             this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,6 +123,7 @@ namespace SimpleHLE {
             // 
             this.textBoxInstruction.Location = new System.Drawing.Point(434, 52);
             this.textBoxInstruction.Name = "textBoxInstruction";
+            this.textBoxInstruction.ReadOnly = true;
             this.textBoxInstruction.Size = new System.Drawing.Size(112, 20);
             this.textBoxInstruction.TabIndex = 2;
             this.textBoxInstruction.TabStop = false;
@@ -138,6 +141,7 @@ namespace SimpleHLE {
             // 
             this.textBoxProgramCounter.Location = new System.Drawing.Point(434, 78);
             this.textBoxProgramCounter.Name = "textBoxProgramCounter";
+            this.textBoxProgramCounter.ReadOnly = true;
             this.textBoxProgramCounter.Size = new System.Drawing.Size(112, 20);
             this.textBoxProgramCounter.TabIndex = 2;
             this.textBoxProgramCounter.TabStop = false;
@@ -155,6 +159,7 @@ namespace SimpleHLE {
             // 
             this.textBoxALU.Location = new System.Drawing.Point(434, 104);
             this.textBoxALU.Name = "textBoxALU";
+            this.textBoxALU.ReadOnly = true;
             this.textBoxALU.Size = new System.Drawing.Size(112, 20);
             this.textBoxALU.TabIndex = 2;
             this.textBoxALU.TabStop = false;
@@ -172,6 +177,7 @@ namespace SimpleHLE {
             // 
             this.textBoxR01.Location = new System.Drawing.Point(434, 130);
             this.textBoxR01.Name = "textBoxR01";
+            this.textBoxR01.ReadOnly = true;
             this.textBoxR01.Size = new System.Drawing.Size(112, 20);
             this.textBoxR01.TabIndex = 2;
             this.textBoxR01.TabStop = false;
@@ -189,6 +195,7 @@ namespace SimpleHLE {
             // 
             this.textBoxR02.Location = new System.Drawing.Point(434, 156);
             this.textBoxR02.Name = "textBoxR02";
+            this.textBoxR02.ReadOnly = true;
             this.textBoxR02.Size = new System.Drawing.Size(112, 20);
             this.textBoxR02.TabIndex = 2;
             this.textBoxR02.TabStop = false;
@@ -206,6 +213,7 @@ namespace SimpleHLE {
             // 
             this.textBoxR03.Location = new System.Drawing.Point(434, 182);
             this.textBoxR03.Name = "textBoxR03";
+            this.textBoxR03.ReadOnly = true;
             this.textBoxR03.Size = new System.Drawing.Size(112, 20);
             this.textBoxR03.TabIndex = 2;
             this.textBoxR03.TabStop = false;
@@ -230,6 +238,7 @@ namespace SimpleHLE {
             // 
             // checkBoxSRZero
             // 
+            this.checkBoxSRZero.AutoCheck = false;
             this.checkBoxSRZero.AutoSize = true;
             this.checkBoxSRZero.Location = new System.Drawing.Point(434, 326);
             this.checkBoxSRZero.Name = "checkBoxSRZero";
@@ -252,6 +261,7 @@ namespace SimpleHLE {
             // 
             this.textBoxClock.Location = new System.Drawing.Point(434, 349);
             this.textBoxClock.Name = "textBoxClock";
+            this.textBoxClock.ReadOnly = true;
             this.textBoxClock.Size = new System.Drawing.Size(112, 20);
             this.textBoxClock.TabIndex = 2;
             this.textBoxClock.TabStop = false;
@@ -269,6 +279,7 @@ namespace SimpleHLE {
             // 
             this.textBoxBus.Location = new System.Drawing.Point(434, 375);
             this.textBoxBus.Name = "textBoxBus";
+            this.textBoxBus.ReadOnly = true;
             this.textBoxBus.Size = new System.Drawing.Size(112, 20);
             this.textBoxBus.TabIndex = 2;
             this.textBoxBus.TabStop = false;
@@ -286,6 +297,7 @@ namespace SimpleHLE {
             // 
             this.textBoxUnityControl0.Location = new System.Drawing.Point(434, 401);
             this.textBoxUnityControl0.Name = "textBoxUnityControl0";
+            this.textBoxUnityControl0.ReadOnly = true;
             this.textBoxUnityControl0.Size = new System.Drawing.Size(112, 20);
             this.textBoxUnityControl0.TabIndex = 2;
             this.textBoxUnityControl0.TabStop = false;
@@ -303,6 +315,7 @@ namespace SimpleHLE {
             // 
             this.textBoxUnityControl1.Location = new System.Drawing.Point(434, 427);
             this.textBoxUnityControl1.Name = "textBoxUnityControl1";
+            this.textBoxUnityControl1.ReadOnly = true;
             this.textBoxUnityControl1.Size = new System.Drawing.Size(112, 20);
             this.textBoxUnityControl1.TabIndex = 2;
             this.textBoxUnityControl1.TabStop = false;
@@ -320,6 +333,7 @@ namespace SimpleHLE {
             // 
             this.textBoxUnityControl2.Location = new System.Drawing.Point(434, 453);
             this.textBoxUnityControl2.Name = "textBoxUnityControl2";
+            this.textBoxUnityControl2.ReadOnly = true;
             this.textBoxUnityControl2.Size = new System.Drawing.Size(112, 20);
             this.textBoxUnityControl2.TabIndex = 2;
             this.textBoxUnityControl2.TabStop = false;
@@ -386,6 +400,7 @@ namespace SimpleHLE {
             // 
             this.textBoxR04.Location = new System.Drawing.Point(434, 208);
             this.textBoxR04.Name = "textBoxR04";
+            this.textBoxR04.ReadOnly = true;
             this.textBoxR04.Size = new System.Drawing.Size(112, 20);
             this.textBoxR04.TabIndex = 2;
             this.textBoxR04.TabStop = false;
@@ -569,7 +584,8 @@ namespace SimpleHLE {
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton1});
+            this.toolStripDropDownButton1,
+            this.toolStripButtonHelp});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(566, 25);
@@ -593,46 +609,66 @@ namespace SimpleHLE {
             // repoOnGithubToolStripMenuItem
             // 
             this.repoOnGithubToolStripMenuItem.Name = "repoOnGithubToolStripMenuItem";
-            this.repoOnGithubToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.repoOnGithubToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.repoOnGithubToolStripMenuItem.Text = "Repo on Github";
             this.repoOnGithubToolStripMenuItem.Click += new System.EventHandler(this.repoOnGithubToolStripMenuItem_Click);
             // 
             // creatorOseiasToolStripMenuItem
             // 
             this.creatorOseiasToolStripMenuItem.Name = "creatorOseiasToolStripMenuItem";
-            this.creatorOseiasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.creatorOseiasToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.creatorOseiasToolStripMenuItem.Text = "Creator: Oseias";
             this.creatorOseiasToolStripMenuItem.Click += new System.EventHandler(this.creatorOseiasToolStripMenuItem_Click);
             // 
             // creatorGabrielToolStripMenuItem
             // 
             this.creatorGabrielToolStripMenuItem.Name = "creatorGabrielToolStripMenuItem";
-            this.creatorGabrielToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.creatorGabrielToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.creatorGabrielToolStripMenuItem.Text = "Creator: Gabriel";
             this.creatorGabrielToolStripMenuItem.Click += new System.EventHandler(this.creatorGabrielToolStripMenuItem_Click);
             // 
             // creatorHenriqueToolStripMenuItem
             // 
             this.creatorHenriqueToolStripMenuItem.Name = "creatorHenriqueToolStripMenuItem";
-            this.creatorHenriqueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.creatorHenriqueToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.creatorHenriqueToolStripMenuItem.Text = "Creator: Henrique";
             this.creatorHenriqueToolStripMenuItem.Click += new System.EventHandler(this.creatorHenriqueToolStripMenuItem_Click);
+            // 
+            // toolStripButtonHelp
+            // 
+            this.toolStripButtonHelp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButtonHelp.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonHelp.Image")));
+            this.toolStripButtonHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonHelp.Name = "toolStripButtonHelp";
+            this.toolStripButtonHelp.Size = new System.Drawing.Size(41, 22);
+            this.toolStripButtonHelp.Text = "Help?";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(236, 9);
+            this.label16.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(201, 29);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(125, 34);
+            this.label16.Size = new System.Drawing.Size(151, 23);
             this.label16.TabIndex = 23;
-            this.label16.Text = "WELCOME!";
+            this.label16.Text = "PROGRAM MEMORY";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(44, 29);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(101, 23);
+            this.label17.TabIndex = 23;
+            this.label17.Text = "TEXT EDITOR";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(566, 481);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.OUTPUT2P1);
@@ -755,6 +791,8 @@ namespace SimpleHLE {
         private System.Windows.Forms.ToolStripMenuItem creatorGabrielToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem creatorHenriqueToolStripMenuItem;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ToolStripButton toolStripButtonHelp;
+        private System.Windows.Forms.Label label17;
     }
 }
 
