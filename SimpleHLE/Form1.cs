@@ -13,10 +13,12 @@ namespace SimpleHLE {
     public partial class Form1 : Form {
         public CheckBox[] OUTPUT1 = new CheckBox[8];
         public CheckBox[] OUTPUT2 = new CheckBox[8];
+        private const int MAX_NUMBER_OF_BITS_IN_BYTE = 8;
 
         public Form1() {
             InitializeComponent();
-
+            
+            // Adding the output buttons to a arrays
             OUTPUT1[0] = OUTPUT1P0;
             OUTPUT1[1] = OUTPUT1P1;
             OUTPUT1[2] = OUTPUT1P2;
@@ -40,6 +42,11 @@ namespace SimpleHLE {
         }
 
         private void buttonCompile_Click(object sender, EventArgs e) {
+            // Clearing the fields to compile
+            CPU.Reset();
+            UpdateGui();
+            
+            // Compile
             Code.Compile(textBoxCode.Text);
             if (Code.Error != "") {
                 textBoxOpcode.Text = Code.Error;
@@ -79,16 +86,22 @@ namespace SimpleHLE {
             textBoxUnityControl0.Text = CPU.UC0.ToString("x2").ToUpper();
             textBoxUnityControl1.Text = CPU.UC1.ToString("x2").ToUpper();
             textBoxUnityControl2.Text = CPU.UC2.ToString("x2").ToUpper();
+            // Converting the output to binary string
             string str = Convert.ToString(CPU.OUTPUT1, 2);
-            while(str.Length < 8) str = str.Insert(0, "0");
+            // Filling left zeroes
+            while(str.Length < MAX_NUMBER_OF_BITS_IN_BYTE) str = str.Insert(0, "0");
+            // Checking the boxes to emulate pins
             for(int i=0; i < OUTPUT1.Length; i++){
-                OUTPUT1[i].CheckState = str[7 - i] == '1' ? CheckState.Indeterminate : CheckState.Unchecked;
+                OUTPUT1[i].CheckState = str[MAX_NUMBER_OF_BITS_IN_BYTE - 1 - i] == '1' ? CheckState.Indeterminate : CheckState.Unchecked;
             }
+            // Converting the output to binary string
             str = Convert.ToString(CPU.OUTPUT2, 2);
-            while (str.Length < 8) str = str.Insert(0, "0");
+            // Filling left zeroes
+            while (str.Length < MAX_NUMBER_OF_BITS_IN_BYTE) str = str.Insert(0, "0");
+            // Checking the boxes to emulate pins
             for (int i = 0; i < OUTPUT2.Length; i++)
             {
-                OUTPUT2[i].CheckState = str[7 - i] == '1' ? CheckState.Indeterminate : CheckState.Unchecked;
+                OUTPUT2[i].CheckState = str[MAX_NUMBER_OF_BITS_IN_BYTE - 1 - i] == '1' ? CheckState.Indeterminate : CheckState.Unchecked;
             }
             checkBoxSRZero.Checked = CPU.SRZERO;
             if (CPU.FAIL) {
@@ -127,24 +140,28 @@ namespace SimpleHLE {
             UpdateGui();
         }
 
+        // Click handler to open URL
         private void repoOnGithubToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ProcessStartInfo githubRepoURL = new ProcessStartInfo("https://github.com/OseiasRocha/Emulator8b");
             Process.Start(githubRepoURL);
         }
 
+        // Click handler to open URL
         private void creatorOseiasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ProcessStartInfo oseiasURL = new ProcessStartInfo("https://github.com/OseiasRocha");
             Process.Start(oseiasURL);
         }
 
+        // Click handler to open URL
         private void creatorGabrielToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ProcessStartInfo gabrielURL = new ProcessStartInfo("https://github.com/gabrielpasini");
             Process.Start(gabrielURL);
         }
 
+        // Click handler to open URL
         private void creatorHenriqueToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ProcessStartInfo henriqueURL = new ProcessStartInfo("https://github.com/Cloudhbj");
@@ -167,7 +184,9 @@ namespace SimpleHLE {
         public const byte R01 = 0x01;
         public const byte R02 = 0x02;
         public const byte R03 = 0x03;
+        // New Register
         public const byte R04 = 0x04;
+        // OUTPUTS
         public const byte O01 = 0x05;
         public const byte O02 = 0x06;
 
@@ -186,6 +205,10 @@ namespace SimpleHLE {
         public static byte[] ROM = new byte[128];
 
         public static void Compile(string code) {
+            // Cleaning variables to recompile
+            Error = "";
+            Array.Clear(ROM, 0, ROM.Length);
+
             var c = code.ToUpper().Replace("\r\n", "\n");
             int pc = 0;
             foreach (var line in c.Split('\n')) {
@@ -627,10 +650,13 @@ namespace SimpleHLE {
         public static void OUT() {
             CLOCK++;
             UC0 = Consts.OUT;
+            // Get output
             Fetch();
             UC1 = BUS;
+            // Get data
             Fetch();
             UC2 = BUS;
+            // Selects register with data
             switch (UC2) {
                 case Consts.R01:
                     R01ReadEnable();
@@ -648,6 +674,7 @@ namespace SimpleHLE {
                     FAIL = true;
                     break;
             }
+            // Selects the output
             switch (UC1)
             {
                 case Consts.O01:
