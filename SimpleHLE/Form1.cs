@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace SimpleHLE {
     public partial class Form1 : Form {
@@ -120,6 +121,30 @@ namespace SimpleHLE {
             CPU.Reset();
             CPU.Run();
             UpdateGui();
+        }
+
+        private void repoOnGithubToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo githubRepoURL = new ProcessStartInfo("https://github.com/OseiasRocha/Emulator8b");
+            Process.Start(githubRepoURL);
+        }
+
+        private void creatorOseiasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo oseiasURL = new ProcessStartInfo("https://github.com/OseiasRocha");
+            Process.Start(oseiasURL);
+        }
+
+        private void creatorGabrielToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo gabrielURL = new ProcessStartInfo("https://github.com/gabrielpasini");
+            Process.Start(gabrielURL);
+        }
+
+        private void creatorHenriqueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo henriqueURL = new ProcessStartInfo("https://github.com/Cloudhbj");
+            Process.Start(henriqueURL);
         }
     }
 
