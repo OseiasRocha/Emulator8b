@@ -167,6 +167,17 @@ namespace SimpleHLE {
             ProcessStartInfo henriqueURL = new ProcessStartInfo("https://github.com/Cloudhbj");
             Process.Start(henriqueURL);
         }
+        // Help
+        private void toolStripButtonHelp_Click(object sender, EventArgs e)
+        {
+            Form2 help = new Form2();
+            help.Show();
+        }
+
+        private void textBoxCode_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

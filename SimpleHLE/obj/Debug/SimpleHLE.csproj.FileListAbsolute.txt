@@ -28,3 +28,24 @@ F:\desenv\Emulator8b\SimpleHLE\obj\Debug\SimpleHLE.pdb
 F:\desenv\Emulator8b\SimpleHLE\bin\Debug\SimpleHLE.exe.config
 F:\desenv\Emulator8b\SimpleHLE\bin\Debug\SimpleHLE.exe
 F:\desenv\Emulator8b\SimpleHLE\bin\Debug\SimpleHLE.pdb
+C:\Users\cloud\Google Drive\FTEC\ENG. COMPUTAÇÃO\8º Semestre\5ª - Microcontroladores\trabalhoGB\Emulator8b-master\SimpleHLE\bin\Debug\SimpleHLE.exe.config
+C:\Users\cloud\Google Drive\FTEC\ENG. COMPUTAÇÃO\8º Semestre\5ª - Microcontroladores\trabalhoGB\Emulator8b-master\SimpleHLE\bin\Debug\SimpleHLE.exe
+C:\Users\cloud\Google Drive\FTEC\ENG. COMPUTAÇÃO\8º Semestre\5ª - Microcontroladores\trabalhoGB\Emulator8b-master\SimpleHLE\bin\Debug\SimpleHLE.pdb
+C:\Users\cloud\Google Drive\FTEC\ENG. COMPUTAÇÃO\8º Semestre\5ª - Microcontroladores\trabalhoGB\Emulator8b-master\SimpleHLE\obj\Debug\SimpleHLE.csprojAssemblyReference.cache
+C:\Users\cloud\Google Drive\FTEC\ENG. COMPUTAÇÃO\8º Semestre\5ª - Microcontroladores\trabalhoGB\Emulator8b-master\SimpleHLE\obj\Debug\SimpleHLE.Form1.resources
+C:\Users\cloud\Google Drive\FTEC\ENG. COMPUTAÇÃO\8º Semestre\5ª - Microcontroladores\trabalhoGB\Emulator8b-master\SimpleHLE\obj\Debug\SimpleHLE.Properties.Resources.resources
+C:\Users\cloud\Google Drive\FTEC\ENG. COMPUTAÇÃO\8º Semestre\5ª - Microcontroladores\trabalhoGB\Emulator8b-master\SimpleHLE\obj\Debug\SimpleHLE.csproj.GenerateResource.cache
+C:\Users\cloud\Google Drive\FTEC\ENG. COMPUTAÇÃO\8º Semestre\5ª - Microcontroladores\trabalhoGB\Emulator8b-master\SimpleHLE\obj\Debug\SimpleHLE.csproj.CoreCompileInputs.cache
+C:\Users\cloud\Google Drive\FTEC\ENG. COMPUTAÇÃO\8º Semestre\5ª - Microcontroladores\trabalhoGB\Emulator8b-master\SimpleHLE\obj\Debug\SimpleHLE.exe
+C:\Users\cloud\Google Drive\FTEC\ENG. COMPUTAÇÃO\8º Semestre\5ª - Microcontroladores\trabalhoGB\Emulator8b-master\SimpleHLE\obj\Debug\SimpleHLE.pdb
+C:\Users\cloud\Google Drive\FTEC\ENG. COMPUTAÇÃO\8º Semestre\5ª - Microcontroladores\trabalhoGB\Emulator8_b\SimpleHLE\bin\Debug\SimpleHLE.exe.config
+C:\Users\cloud\Google Drive\FTEC\ENG. COMPUTAÇÃO\8º Semestre\5ª - Microcontroladores\trabalhoGB\Emulator8_b\SimpleHLE\bin\Debug\SimpleHLE.exe
+C:\Users\cloud\Google Drive\FTEC\ENG. COMPUTAÇÃO\8º Semestre\5ª - Microcontroladores\trabalhoGB\Emulator8_b\SimpleHLE\bin\Debug\SimpleHLE.pdb
+C:\Users\cloud\Google Drive\FTEC\ENG. COMPUTAÇÃO\8º Semestre\5ª - Microcontroladores\trabalhoGB\Emulator8_b\SimpleHLE\obj\Debug\SimpleHLE.csprojAssemblyReference.cache
+C:\Users\cloud\Google Drive\FTEC\ENG. COMPUTAÇÃO\8º Semestre\5ª - Microcontroladores\trabalhoGB\Emulator8_b\SimpleHLE\obj\Debug\SimpleHLE.Form1.resources
+C:\Users\cloud\Google Drive\FTEC\ENG. COMPUTAÇÃO\8º Semestre\5ª - Microcontroladores\trabalhoGB\Emulator8_b\SimpleHLE\obj\Debug\SimpleHLE.Form2.resources
+C:\Users\cloud\Google Drive\FTEC\ENG. COMPUTAÇÃO\8º Semestre\5ª - Microcontroladores\trabalhoGB\Emulator8_b\SimpleHLE\obj\Debug\SimpleHLE.Properties.Resources.resources
+C:\Users\cloud\Google Drive\FTEC\ENG. COMPUTAÇÃO\8º Semestre\5ª - Microcontroladores\trabalhoGB\Emulator8_b\SimpleHLE\obj\Debug\SimpleHLE.csproj.GenerateResource.cache
+C:\Users\cloud\Google Drive\FTEC\ENG. COMPUTAÇÃO\8º Semestre\5ª - Microcontroladores\trabalhoGB\Emulator8_b\SimpleHLE\obj\Debug\SimpleHLE.csproj.CoreCompileInputs.cache
+C:\Users\cloud\Google Drive\FTEC\ENG. COMPUTAÇÃO\8º Semestre\5ª - Microcontroladores\trabalhoGB\Emulator8_b\SimpleHLE\obj\Debug\SimpleHLE.exe
+C:\Users\cloud\Google Drive\FTEC\ENG. COMPUTAÇÃO\8º Semestre\5ª - Microcontroladores\trabalhoGB\Emulator8_b\SimpleHLE\obj\Debug\SimpleHLE.pdb
